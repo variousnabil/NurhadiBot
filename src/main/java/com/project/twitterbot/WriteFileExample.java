@@ -20,8 +20,7 @@ public class WriteFileExample {
 	ArrayList<String> kamus = new ArrayList<String>();
 	
 	public void ReadDataMakeArray() {
-		try {
-			try {
+		
 				InputStream fis = new FileInputStream("src\\main\\resources\\nomina.txt");
 					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("Cp1252"));
 					BufferedReader br = new BufferedReader(isr);
@@ -31,12 +30,7 @@ public class WriteFileExample {
 					kamus.add(kalimat);
 				}
 
-			}catch (IOException e) {
-			e.printStackTrace();
-		}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+			
 	}
 
 }
