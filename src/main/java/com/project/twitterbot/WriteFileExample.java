@@ -39,9 +39,10 @@ public class WriteFileExample {
 	
 	public void ReadDataMakeArray() {
 		try {
-			try (InputStream fis = new FileInputStream("src\\main\\resources\\nomina.txt");
+			try{
+				InputStream fis = new FileInputStream("src\\main\\resources\\nomina.txt");
 					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("Cp1252"));
-					BufferedReader br = new BufferedReader(isr);) {
+					BufferedReader br = new BufferedReader(isr);
 				while ((line = br.readLine()) != null) {
 					kalimat = line + " bangsat kau";
 					System.out.println(kalimat);
