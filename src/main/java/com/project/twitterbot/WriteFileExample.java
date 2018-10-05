@@ -13,10 +13,15 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+public class WriteFileExample {
+	String line;
+	String kalimat;
+	ArrayList<String> kamus = new ArrayList<String>();
 	
 	public void ReadDataMakeArray() {
 		try {
-			try{
+			try {
 				InputStream fis = new FileInputStream("src\\main\\resources\\nomina.txt");
 					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("Cp1252"));
 					BufferedReader br = new BufferedReader(isr);
