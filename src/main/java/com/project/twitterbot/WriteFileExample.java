@@ -49,7 +49,9 @@ public class WriteFileExample {
 					kamus.add(kalimat);
 				}
 
-			}
+			}catch (IOException e) {
+			e.printStackTrace();
+		}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
