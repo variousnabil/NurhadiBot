@@ -18,16 +18,10 @@ public class WriteFileExample {
 	String line;
 	String kalimat;
 	ArrayList<String> kamus = new ArrayList<String>();
-	File file = new File("d:/newfile.txt");
+// 	File file = new File("d:/newfile.txt");
 	
 	public void WriteData() {
-		try (FileOutputStream fop = new FileOutputStream(file);
-				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fop));) {
-
-			// if file doesn't exists, then create it
-			if (!file.exists()) {
-				file.createNewFile();
-			}
+		try {
 			
 			for (String string : kamus) {
 				bw.write(string);
@@ -45,7 +39,7 @@ public class WriteFileExample {
 	
 	public void ReadDataMakeArray() {
 		try {
-			try (InputStream fis = new FileInputStream("D:\\eclipse-workspace\\twitterbot\\src\\main\\resources\\nomina.txt");
+			try (InputStream fis = new FileInputStream("src\\main\\resources\\nomina.txt");
 					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("Cp1252"));
 					BufferedReader br = new BufferedReader(isr);) {
 				while ((line = br.readLine()) != null) {
