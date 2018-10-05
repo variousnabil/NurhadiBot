@@ -20,13 +20,6 @@ public class WriteFileExample {
 	ArrayList<String> kamus = new ArrayList<String>();
 	File file = new File("d:/newfile.txt");
 	
-	public static void main(String[] args) {
-		WriteFileExample wfe = new WriteFileExample();
-		wfe.ReadDataMakeArray();
-		wfe.WriteData();
-		
-	}
-	
 	public void WriteData() {
 		try (FileOutputStream fop = new FileOutputStream(file);
 				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fop));) {
