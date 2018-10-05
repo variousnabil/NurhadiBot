@@ -13,29 +13,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-public class WriteFileExample {
-	String line;
-	String kalimat;
-	ArrayList<String> kamus = new ArrayList<String>();
-// 	File file = new File("d:/newfile.txt");
-	
-	public void WriteData() {
-		try {
-			
-			for (String string : kamus) {
-				bw.write(string);
-				bw.newLine();
-			}
-			
-			if (kalimat.equals(null)) {
-				fop.close();
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 	
 	public void ReadDataMakeArray() {
 		try {
