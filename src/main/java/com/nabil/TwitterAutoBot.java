@@ -38,9 +38,9 @@ public class TwitterAutoBot {
 			System.out.println("Tweeting: " + line + "...");
 
 			try {
-				System.out.println("Sleeping for 20 minutes...");
+				System.out.println("Sleeping for 10 sec...");
 // 				Thread.sleep(1200000); // every 20 minutes
-				Thread.sleep(30000); // every 10 seconds
+				Thread.sleep(100000); // every 10 seconds
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
