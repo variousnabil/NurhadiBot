@@ -1,4 +1,4 @@
-package com.project.twitterbot;
+package com.nabil;
 
 import java.io.InputStream;
 import twitter4j.Status;
@@ -11,15 +11,22 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class TwitterAutoBot {
 
-	public static void main(String[] args) {
-		tweetLines();
-	}
+//	public static void main(String[] args) {
+//		tweetLines();
+//	}
+	@Autowired
+	@Qualifier("wfe")
+	WriteFileExample wfe;
 
-	private static void tweetLines() {
-		String line;
-		WriteFileExample wfe = new WriteFileExample();
+	public void tweetLines() {
+		
 		wfe.ReadDataMakeArray();
 		ArrayList<String> list = wfe.kamus;
 		Random random = new Random();
@@ -40,7 +47,7 @@ public class TwitterAutoBot {
 		}
 	}
 
-	private static void sendTweet(String line) {
+	public void sendTweet(String line) {
 		Twitter twitter = TwitterFactory.getSingleton();
 		Status status;
 		try {

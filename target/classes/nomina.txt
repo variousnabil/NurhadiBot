@@ -6190,8 +6190,6 @@ ijbar
 ijmak
 ijmal
 ijon
-ijtihad
-ijtimak
 ikamah
 ikan
 ikat
@@ -12051,7 +12049,6 @@ pagupon
 paguyuban
 pah
 paha
-pahala
 pahang
 pahar
 pahat
