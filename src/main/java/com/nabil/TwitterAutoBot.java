@@ -32,14 +32,14 @@ public class TwitterAutoBot {
 		Random random = new Random();
 
 		// Deal with the line
-		for (int i = 0; i<list.size();i++) {
-			String gelo = list.get(random.nextInt(list.size()));
-			sendTweet(gelo);
-			System.out.println("Tweeting: " + gelo + "...");
+		while(true) {
+			String line = list.get(random.nextInt(list.size()));
+			sendTweet(line);
+			System.out.println("Tweeting: " + line + "...");
 
 			try {
-				System.out.println("Sleeping for 40 minutes...");
-				Thread.sleep(2400000); // every 40 minutes
+				System.out.println("Sleeping for 20 minutes...");
+				Thread.sleep(1200000); // every 20 minutes
 				// Thread.sleep(10000); // every 10 seconds
 			} catch (InterruptedException e) {
 				e.printStackTrace();

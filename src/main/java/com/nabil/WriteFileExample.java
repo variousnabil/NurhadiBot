@@ -36,9 +36,7 @@ public class WriteFileExample {
 					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("Cp1252"));
 					BufferedReader br = new BufferedReader(isr);) {
 				while ((line = br.readLine()) != null) {
-					kalimat = line + " bangsat kau";
-					System.out.println(kalimat);
-					kamus.add(kalimat);
+					kamus.add(line);
 				}
 
 			}
