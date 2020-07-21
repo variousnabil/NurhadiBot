@@ -1,13 +1,10 @@
 package com.nabil;
 
-import java.io.InputStream;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 
-import java.io.*;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -17,30 +14,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TwitterAutoBot {
-
-//	public static void main(String[] args) {
-//		tweetLines();
-//	}
 	@Autowired
 	@Qualifier("wfe")
 	WriteFileExample wfe;
 
 	public void tweetLines() {
-		
+
 		wfe.ReadDataMakeArray();
 		ArrayList<String> list = wfe.kamus;
 		Random random = new Random();
 
 		// Deal with the line
-		while(true) {
+		while (true) {
 			String line = list.get(random.nextInt(list.size()));
 			sendTweet(line);
 			System.out.println("Tweeting: " + line + "...");
 
 			try {
-				System.out.println("Sleeping for 10 sec...");
-// 				Thread.sleep(1200000); // every 20 minutes
-				Thread.sleep(100000); // every 10 seconds
+				System.out.println("Sleeping for 1 day...");
+				Thread.sleep(86400000); // every 1 day
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
