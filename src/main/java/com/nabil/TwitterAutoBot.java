@@ -19,17 +19,14 @@ public class TwitterAutoBot {
 	WriteFileExample wfe;
 
 	public void tweetLines() {
-
 		wfe.ReadDataMakeArray();
 		ArrayList<String> list = wfe.kamus;
 		Random random = new Random();
-
-		// Deal with the line
+		// Infinite Loop for twitter worker :( BATCH WORK!
 		while (true) {
 			String line = list.get(random.nextInt(list.size()));
 			sendTweet(line);
 			System.out.println("Tweeting: " + line + "...");
-
 			try {
 				System.out.println("Sleeping for 1 day...");
 				Thread.sleep(86400000); // every 1 day
