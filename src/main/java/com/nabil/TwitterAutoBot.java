@@ -28,10 +28,10 @@ public class TwitterAutoBot {
 			sendTweet(line);
 			System.out.println("Tweeting: " + line + "...");
 			try {
-				// System.out.println("Sleeping for 1 day...");
-				// Thread.sleep(86400000); // every 1 day
-				System.out.println("Sleeping for 1 minute...");
-				Thread.sleep(60000); // every 1 Minute
+				System.out.println("Sleeping for 12 hours...");
+				Thread.sleep(43200000); // every 12 hours
+				// System.out.println("Sleeping for 1 minute...");
+				// Thread.sleep(60000); // every 1 Minute
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
